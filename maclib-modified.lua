@@ -1,3 +1,7 @@
+-- Original code by: biggaboy212
+-- Check their github out! 
+-- https://github.com/biggaboy212
+
 local MacLib = { 
 	Options = {}, 
 	Folder = "Maclib", 
@@ -76,7 +80,7 @@ function MacLib:Title(Text, isRgb)
 		or (gethui and gethui())
 		or (cloneref and cloneref(MacLib.GetService("CoreGui")) or MacLib.GetService("CoreGui"))
 	UI["1"]["Name"] = [[TitleGui]]
-	UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+	UI["1"]["IgnoreGuiInset"] = true
 
 	UI["2"] = Instance.new("TextLabel", UI["1"])
 	UI["2"]["TextWrapped"] = true
