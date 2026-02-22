@@ -79,8 +79,8 @@ function MacLib:Title(Text, isRgb)
 		and LocalPlayer:FindFirstChild("PlayerGui")
 		or (gethui and gethui())
 		or (cloneref and cloneref(MacLib.GetService("CoreGui")) or MacLib.GetService("CoreGui"))
-	UI["1"]["Name"] = [[TitleGui]]
 	UI["1"]["IgnoreGuiInset"] = true
+	UI["1"]["DisplayOrder"] = 1e99
 
 	UI["2"] = Instance.new("TextLabel", UI["1"])
 	UI["2"]["TextWrapped"] = true
@@ -96,7 +96,6 @@ function MacLib:Title(Text, isRgb)
 	UI["2"]["Size"] = UDim2.new(0.26944, 0, 0.05143, 0)
 	UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 	UI["2"]["Text"] = Text or "Maclib"
-	UI["2"]["Name"] = [[Title]]
 	UI["2"]["Position"] = UDim2.new(0.85694, 0, 0.04286, 0)
 
 	UI["3"] = Instance.new("UIStroke", UI["2"])
@@ -5930,3 +5929,4 @@ function MacLib:Demo()
 end
 
 return MacLib
+
